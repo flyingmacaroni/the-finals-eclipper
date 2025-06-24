@@ -1,0 +1,10 @@
+/target
+/.idea
+/public/themes/
+node_modules
+*.eclipper_cache
+*.mp4
+*.mkv
+/cli/target/
+/dist
+scratch

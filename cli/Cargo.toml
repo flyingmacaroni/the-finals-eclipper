@@ -1,0 +1,28 @@
+[package]
+name = "the-finals-eclipper"
+description = "Command line tool to automatically create a montage of eliminations from a recording of THE FINALS gameplay"
+version = "0.1.1"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.22"
+bincode = "2.0.0-rc.3"
+clap = { version = "4.4", features = ["derive"] }
+derivative = "2.2"
+crossbeam-channel = "0.5"
+fast_image_resize = { version = "4.2", features = ["image"] }
+serde = { version = "1.0", features = ["derive"] }
+tesseract = "0.15"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+ffmpeg-next = { version = "7.1" }
+
+[profile.release]
+lto = true
+incremental = true
+
+[profile.bench]
+lto = true
+incremental = true

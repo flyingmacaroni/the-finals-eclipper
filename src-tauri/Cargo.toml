@@ -1,0 +1,48 @@
+[package]
+name = "the-finals-eclipper"
+version = "0.0.6"
+description = "A Tauri App"
+authors = ["you"]
+license = ""
+repository = ""
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+axum = "0.7"
+axum-extra = { version = "0.9", features = ["typed-header"] }
+base64 = "0.21"
+bytes = "1.5.0"
+common = { path = "../cli", package = "the-finals-eclipper" }
+headers = "0.4"
+image = "0.24"
+lru = "0.12"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+tauri-plugin-fs = "2"
+tauri-plugin-shell = "2"
+thiserror = "1.0"
+tokio = "1.35"
+tower = "0.4"
+tower-http = { version = "0.5", features = ["fs", "trace"] }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+[features]
+# this feature is used for production builds or when `devPath` points to the filesystem
+# DO NOT REMOVE!!
+custom-protocol = ["tauri/custom-protocol"]
+
+[profile.release]
+lto = true
+incremental = true
+
+[profile.bench]
+lto = true
+incremental = true

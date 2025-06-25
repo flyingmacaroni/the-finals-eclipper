@@ -38,4 +38,15 @@ If processing is stuck for a long time, close the application and retry without 
 By default, when you press "Export", the suggested name will be the original filename with eclipper_trimmed added to the end.
 This exporting should be quick since it uses lossless cutting without re-encoding.
 
+On this screen you can also right-click clips to export them individually.
+
 ![Screenshot](screenshots/screenshot3.png)
+
+## Roadmap
+In no particular order:
+ - Add support for other languages
+ - Add an option to add chapter markers to the original video file to aid in editing
+ - Perhaps make the built-in video editor more versatile and easier to use.
+   - There is support for adding clips, but it's not very user-friendly.
+   - It would be nice to be able to add clips by selecting a range in the input video.
+ - Exporting to a video editor? If so, what editing software or format would I use?
